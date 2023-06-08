@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.ff-meri {
+    font-family: 'Merriweather', serif;
+}
+
+.ff-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2e82c8;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 100;
+    color: #6e6e6e;
+}
+
+h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+.container {
+    width: 530px;
+    height: 100%;
+    display: grid;
+    grid: 
+        "header-l header-r" 10%
+        "s-left s-right" 1fr/
+        3fr 1fr
+    ;
+
+    margin: 30px;
+    gap: 30px;
+    transition: ease all .5s;
+}
+
+.me-c {
+    display: flex;
+    align-items: center;
+    grid-area: header-l;
+}
+
+.mc-c {
+    display: flex;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.personal-c {
+    grid-area: header-r;
+    color: #6e6e6e;
+    font-size: 9px;
+}
+
+.left {
+    grid-area: s-left;
+}
+
+.right {
+    grid-area: s-right;
+}
+
+.me-c > figure > img {
+    height: 100px;
+}
+
+.me-c > figure {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.me-c > figure > figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.me-c > figure > figcaption > div:first-of-type {
+    font-size: 32px;
+}
+
+.me-c > figure > figcaption > div:last-of-type {
+    font-size: 9px;
+    color: #6e6e6e;
+}
+
+@media screen and (max-width: 810px) {
+    .container {
+        width: 70%;
+        grid: 
+            "header-l" 10%
+            "header-r" 6%
+            "s-left" 1fr
+            "s-right" 1fr/
+            1fr
+        ;
+        gap: 0px;
+    }
+
+    .personal-c  {
+        align-items: start;
+    }
+}
+
+article {
+    margin-bottom: 32px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    color: #6e6e6e;
+}
+
+a {
+    color: #6e6e6e;
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    font-size: 11px;
+}
